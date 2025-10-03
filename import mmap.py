@@ -40,10 +40,10 @@ def mmap_chunks_utf8_safe(file_path, chunk_size):
     return decorator
 
 
-path = "/home/alexander-bontempo/Desktop/TFM_christ/scanprosite/scanprosite_clean_last.fasta"
+path = "/home/alexander-bontempo/Desktop/TFM_christ/scanprosite/scanprosite_clean_last.fasta" #change the path to point to your file
 
 @mmap_chunks_utf8_safe(path, chunk_size=10000)
-def process_chunk(chunk):
+def process_chunk(chunk):  #here goes your function  just add (chunk) as parameter. Im you function you can handle chunk as a text.
     print("Chunk length:", len(chunk))
     print(chunk)
 
